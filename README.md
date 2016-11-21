@@ -7,6 +7,10 @@ Inför OOP1 Tentan
 Primitiva datatyper sparas direkt i c# stack och dess värden är direkt nåbara i ett program.
 Eftersom att värdet av en primitiv datatyp är direkt nåbart kan man enkelt kopiera eller byta ut dem.
 
+* Kan inte delas ner i mindre komponenter.
+* Kan bara presentera ett värde.
+* Har ingen inre struktur eller metoder utan kan bara påverkas av yttre operatorer. 
+
 ```c#
 int tal1 = 2;
 int tal2 = 4;
@@ -58,7 +62,7 @@ char tecken = 't';
 ```
 
 ### Referenstyper
-Referenstypers värde sparas direkt på heapen men nås genom en identifierare på stacken.
+Referenstypers värde sparas direkt på stacken men nås genom en identifierare på heapen.
 Alltså kan man aldrig direkt nå en referenstyps värde utan endast dess identifierare, det själva underliggande värdet
 hanteras av .NET plattformen. Detta gör att man endast kan påverka referenstypens identifierare i efterhand och inte det 
 underliggande värdet.
@@ -95,6 +99,44 @@ Console.WriteLine(listaAvSträngar[0]); // => "Sträng nr1"
 Console.WriteLine(listaAvInts[1]); // => 30
 // En lista fungerar på många sätt likt en array men är lite mer dynamiskt.
 // Man behöver inte definiera antalet föremål i en lista vid deklaration och antalet föremål kan även ändras i efterhand.
+```
+
+## Typomvandling och konvertering
+* Typomvandling och konvertering är inte samma sak.
+* Typomvandling görs enbart mellan datatyper som är väldigt lika, t ex: int och double
+* Konvertering kan göras av datatyper som skiljer sig från varandra t ex en string till en int, string -> int ”7” -> 7
+
+### Konvertering
+
+```c#
+string sträng1 = ”12.3”;
+string sträng2 = ”567”;
+string sträng3 = ”en sträng”;
+
+// Konverterar en sträng till en double
+double d = Convert.ToDouble(sträng1); // d = 12.3
+
+// Konverterar en sträng till en int
+int i = Convert.ToInt32(sträng2); //i = 567
+
+// Försöker konvertera en sträng utan siffror till en int, men kommer att misslyckas och krascha programmatet
+int i = Convert.ToInt32(sträng3); // Kommer att skicka en exception
+```
+
+### Implicita typomvandlingar
+Implicita typomvandlingar sker utan informationsförlust.
+```c#
+int i = 33;
+double d = i; //d = 33.0
+// Typomvandlingen sker utan informationsförlust, därav är det en implicit typomvandling
+```
+
+### Explicita typomvandlingar
+Explicita typomvandlingar sker med informationsförlust.
+```c#
+d = 3.5;
+i =(int)d; //i = 3
+// Typomvandlingen sker med informationsförlust, därför är det en explicit typomvandling
 ```
 
 ## Klasser
