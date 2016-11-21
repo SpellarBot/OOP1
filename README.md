@@ -106,24 +106,34 @@ En klass är en typ av datastruktur som kan hålla variabler, metoder, mm..
 // En private class kan endast anropas innanför klassen själv.
 // En protected class kan endast anropas innanför klassen själv eller klasser som ärver av den.
 public Class klassNamn {
-  // Precis som klasser kan man på liknande sätt använda public, private och protected för instansvariabler
-  public string enPublikSträng = "Jag kan nås överallt i klassen och i alla instanser av klassen!";
-  private string enPrivatSträng = "Jag kan endast nås innanför denna klass";
-  protected string enSkyddadSträng = "Jag kan endast nås innanför denna klass eller inom alla klasser som ärver av denna!";
+}
+```
 
- // Samma sak gäller även metoder och konstruktorn som också kan använda public, private och protected
- // Alla klasser har alltid en konstruktor, antingen som vi själva definerar eller defineras automatiskt vid kompilering.
- // En konstruktor ser precis ut som en metod förutom att den inte har ett returvärde och alltid har samma namn som klassen.
- // Konstruktorn körs automatist vid instantiering av klassen
- public klassNamn(){
+### Instansvariablar
+```c#
+// Precis som klasser kan man på liknande sätt använda public, private och protected för instansvariabler
+public string enPublikSträng = "Jag kan nås överallt i klassen och i alla instanser av klassen!";
+private string enPrivatSträng = "Jag kan endast nås innanför klassen";
+protected string enSkyddadSträng = "Jag kan endast nås innanför klassen eller inom alla klasser som ärver av denna!";
+```
+
+### Metoder
+```c#
+// Metoder kan returnera alla datatyper och/eller ta emot dem som argument.
+// Om en metod inte returnerar något använder man sig utav void.
+// Om en metod inte tar emot några argument så lämnar man bara paranteserna efter metodnamnet tomma.
+private void metodNamn(int heltal){
+  Console.WriteLine("En privat metod som inte returnerar någonting utan bara skriver ut följande heltal: " + heltal);
+}
+```
+
+### Konstruktorn
+```c#
+// Samma sak gäller även metoder och konstruktorn som också kan använda public, private och protected
+// Alla klasser har alltid en konstruktor, antingen som vi själva definerar eller defineras automatiskt vid kompilering.
+// En konstruktor ser precis ut som en metod förutom att den inte har ett returvärde och alltid har samma namn som klassen.
+// Konstruktorn körs automatist vid instantiering av klassen
+public klassNamn(){
   Console.WriteLine("Jag är en konstruktor!");
- }
- 
-  // Metoder kan returnera alla datatyper och/eller ta emot dem som argument.
-  // Om en metod inte returnerar något använder man sig utav void.
-  // Om en metod inte tar emot några argument så lämnar man bara paranteserna efter metodnamnet tomma.
-  private void metodNamn(int heltal){
-    Console.WriteLine("Jag är en privat metod som inte returnerar någonting utan bara skriver ut följande heltal: " + heltal);
- }
 }
 ```
