@@ -1,6 +1,54 @@
 # OOP1
 Inför OOP1 Tentan
 
+## Operatorer 
+C# har väldigt många olika operatorer, nedan kommer alla operatorer som är relevanta inför tentan.
+
+### Aritmetiska
+* Addition (+), subtraktion (-), multiplikation (*), division (/) och modulo (%)
+* Mulitplikation (*), subtraktion (/) och modulus (%) binder starkare än + och -, dvs 3+2*4 = 3+(2*4)
+
+### Relation
+Följande operatorer kan användas för att jämföra två olika värden. Viktigt att notera är att likhetstecknet alltid ska ligga till höger om det andra tecknet.
+
+* >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Större än
+* <  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mindre än
+* == &nbsp;&nbsp;&nbsp;&nbsp; Lika med
+* != &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inte lika med/skilt från
+* <= &nbsp;&nbsp;&nbsp;&nbsp; Mindre än eller lika med
+* >= &nbsp;&nbsp;&nbsp;&nbsp; Större än eller lika med
+
+Exempel på relations operatorer:
+```c#
+if(2 > 1) // => True därför 2 är STÖRRE än 1
+if(2 < 1) // => True därför 1 är MINDRE än 2
+if(2 == 1) // => False därför att 2 inte är samma som 1
+if(2 != 1) // => True därför att 2 inte är samma som 1
+if(3 <= 2) // => True därför att 2 är mindre än eller lika med 3
+if(2 >= 1) // => True därför att 2 är större än eller lika med 1
+```
+
+### Logiska operatorer
+* && &nbsp;&nbsp; Och
+* || &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eller
+* ! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Negation
+
+Exempel på logiska operatorer:
+```c#
+if(true && true) // => True därför att båda påståenden är sanna
+if(true || false) // => True därför att ett av påståenden är sant
+if(!true) // => False därför negationen av true är false
+```
+
+## Inkrementering och dekrementering
+```c#
+int number = 1; // variabeln number tilldelas värdet 1
+number++; // variabeln number ökar/inkrementeras med 1
+number += 5 // variabeln number ökar med 5
+number *= 3 // variabeln number ökar med sitt värde multiplicerat med 3
+number /=2 // variabeln number subtraheras med 2
+```
+
 ## Datatyper
 
 ### Värde/Primitiva datatyper
