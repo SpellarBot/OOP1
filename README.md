@@ -282,3 +282,11 @@ public klassNamn(){
   Console.WriteLine("Jag är en konstruktor!");
 }
 ```
+
+## Objektorienterad programmering
+
+### Abstraktion
+Abstraktion är ett sätt att hantera något komplext och bryta ner det till mer lättförståliga element. När man tänker på abstraktioner inom programmering läggs vikten på dess funktionalitet och beteende istället för hur de tekniskt ska implementeras.
+
+### Inkapsling
+Inkapsling innebär att man begränsar åtkomst till ett objekts medlemmar och data. Genom att använda sig av inkapsling kan man skydda koden från felaktigt användande och oväntade förändringar av data.
