@@ -40,13 +40,68 @@ if(true || false) // => True därför att ett av påståenden är sant
 if(!true) // => False därför negationen av true är false
 ```
 
-## Inkrementering och dekrementering
+### Inkrementering och dekrementering
 ```c#
 int number = 1; // variabeln number tilldelas värdet 1
 number++; // variabeln number ökar/inkrementeras med 1
 number += 5 // variabeln number ökar med 5
 number *= 3 // variabeln number ökar med sitt värde multiplicerat med 3
 number /=2 // variabeln number subtraheras med 2
+```
+
+## Selektion
+Det finns två typer av selektion i språket c#, if och switch.
+
+### Satsen if
+* Villkor med relationsoperatorer eller logiska operatorer
+* Exempelvis > (större än)
+
+Se exempel på if-satser under logiska operatorer och relations operatorer.
+
+
+### Satsen Switch
+* Vilken case-sats som körs beror på villkoret
+* Fördelaktigt över if-satser när jämförelse sker mot många olika utfall
+
+Exempel på switch:
+```c#
+switch(nummer) // Värdet variabeln antar avgör vilken case-sats som ska köras
+{
+  case 1:
+    //ifall nummer = 1 körs denna kod;
+  break;
+  case 2:
+    //ifall nummer = 2 körs denna kod;
+  break;
+  default:
+    //ifall nummer är något annat körs denna kod;
+  break;
+}
+
+switch(nummer) // Switch kan även köra samma kod för ett antal olika cases
+{
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+    // Ifall nummer är lika med 1, 2, 3 eller 4 så körs denna kod.
+  break;
+  default:
+    //ifall nummer är något annat körs denna kod;
+  break;
+}
+```
+
+## Iteration
+Iteration används för att återupprepa ett kodblock flera gånger, detta kan göras genom for-loopar eller while-loopar.
+En for loop körs ett givet antal iterationer, t ex 10 gånger medan en while loop körs så länge ett påstående är sant.
+Om en for loop inte har ett givet antal iterationer eller en while loops påstående alltid förblir sant kommer loopen pågå
+"för alltid" och då få programmet att krascha.
+
+Exempel på loopar
+```c#
+for (int i = 1; i <= 10; i++) // Körs tio gånger
+while (i == 5) // Körs så länge i är like med 5
 ```
 
 ## Datatyper
